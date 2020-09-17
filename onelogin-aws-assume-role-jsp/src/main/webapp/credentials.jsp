@@ -41,7 +41,8 @@ String principalArn = roleData[1];
 AssumeRoleWithSAMLRequest assumeRoleWithSAMLRequest = new AssumeRoleWithSAMLRequest()
 		.withPrincipalArn(principalArn)
 		.withRoleArn(roleArn)
-		.withSAMLAssertion(samlResponse);
+		.withSAMLAssertion(samlResponse)
+		.withDurationSeconds(39600);
 
 BasicAWSCredentials awsCredentials = new BasicAWSCredentials("", "");
 
